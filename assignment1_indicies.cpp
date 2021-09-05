@@ -25,7 +25,7 @@ int main(){
     //Loop through the list, checking each index value against every other value to find a pair that will total up to our target value
     for (int i = 0; i < arrayLength; i++) {
         for (int j = 1; j < arrayLength; j++) {
-            if (numList[i] + numList[j] == target) {
+            if (numList[i] + numList[j] == target && i != j) {
                 cout << "Target of (" << target << ") found" << "\n";
                 cout << "Index: " << i << " and Index: " << j << "\n";
                 cout << "Value: " << numList[i] << " and Value: " << numList[j] << "\n";
