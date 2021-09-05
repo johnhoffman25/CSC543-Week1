@@ -8,16 +8,19 @@ using namespace std;
 
 int main(){
 
+    //Constraints:
+    //2 <= numList.length <= 104
+    //-109 <= numList[i] <= 109
+    //-109 <= target <= 109
+
     //Initializing a few different arrays for testing purposes
 
-    //int numList[4] = {2,7,11,15};
-    int numList[3] = {3,2,4};
+    int numList[4] = {2,7,11,15};
+    //int numList[3] = {3,2,4};
     //int numList[2] = {3,3};
-    //int numList[10] = {1,2,3,4,5,6,7,8,9,10};
-    //int numList[3] = {1,0,0};
 
     //Input the target value
-    int target = 6;
+    int target = 9;
 
     //Get the length of the array we are using
     int arrayLength = sizeof(numList)/sizeof(numList[0]);
@@ -29,8 +32,9 @@ int main(){
                 cout << "Target of (" << target << ") found" << "\n";
                 cout << "Index: " << i << " and Index: " << j << "\n";
                 cout << "Value: " << numList[i] << " and Value: " << numList[j] << "\n";
+                cout << numList[i] << " + " << numList[j] << " = " << target;
 
-                //We can assume that there is only one solution, so if there is a solution, we can quit the program
+                //We can assume that there is only one solution, so if there is a solution found, we can quit the program
                 return 0;
             }
             else {
